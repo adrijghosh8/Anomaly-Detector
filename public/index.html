@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adaptive Anomaly Detector</title>
+    <link rel="stylesheet" href="static/styles.css" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">AI + ML anomaly intelligence</p>
+          <h1>Adaptive Anomaly Detector</h1>
+          <p class="hero-copy">
+            Upload PMAY or any tabular dataset. The website adapts to the columns,
+            detects unusual records, explains risk signals, and animates anomalies
+            for a clean review experience.
+          </p>
+        </div>
+        <div class="upload-panel">
+          <label for="fileInput">Upload data file</label>
+          <input id="fileInput" type="file" accept=".csv,.txt,.xlsx,.xls" />
+          <button id="analyzeBtn" type="button">Analyze dataset</button>
+          <p class="hint">CSV, TXT, and Excel files are analysed directly in your browser.</p>
+        </div>
+      </section>
+
+      <section id="status" class="status hidden"></section>
+
+      <section id="dashboard" class="hidden">
+        <div class="toolbar">
+          <div>
+            <p class="eyebrow">Results</p>
+            <h2 id="datasetTitle">Dashboard</h2>
+          </div>
+          <div class="controls">
+            <label>Risk <select id="riskFilter"></select></label>
+            <label>Group <select id="groupSelect"></select></label>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <article><span>Rows</span><strong id="rowsMetric">0</strong></article>
+          <article><span>Anomalies</span><strong id="anomalyMetric">0</strong></article>
+          <article><span>Anomaly rate</span><strong id="rateMetric">0%</strong></article>
+          <article><span>Model</span><strong id="modelMetric">-</strong></article>
+        </div>
+
+        <div class="pulse">
+          <div class="pulse-dot"></div>
+          <div>
+            <strong id="pulseTitle">Anomaly animation ready</strong>
+            <p>High-scoring records pulse and expand in the animated scatter graph.</p>
+          </div>
+        </div>
+
+        <section class="grid">
+          <div class="panel wide">
+            <div class="panel-head">
+              <h3>Animated anomaly graph</h3>
+              <div class="axis-controls">
+                <select id="xAxis"></select>
+                <select id="yAxis"></select>
+              </div>
+            </div>
+            <div id="scatterChart" class="chart"></div>
+          </div>
+          <div class="panel">
+            <h3>Risk distribution</h3>
+            <div id="riskChart" class="chart small"></div>
+          </div>
+          <div class="panel">
+            <h3>Group summary</h3>
+            <div id="groupChart" class="chart small"></div>
+          </div>
+        </section>
+
+        <section class="panel table-panel">
+          <div class="panel-head">
+            <h3>Highest-risk records</h3>
+            <button id="downloadBtn" type="button">Download CSV</button>
+          </div>
+          <div class="table-wrap">
+            <table id="resultsTable"></table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="static/app.js"></script>
+  </body>
+</html>

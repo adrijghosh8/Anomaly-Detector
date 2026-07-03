@@ -1,0 +1,13 @@
+VariableName,VariableCode,Type_Of_Variable,Unit_Of_Measure,Scaling_Factor,Aggregation_Type,Weighing_Varible_ID,Weighing_Variable_Name,Long_Description
+Country,Country,Key Identifier,,0,,,,Country
+State,StateName,Key Identifier,,0,,,,State
+State lgd code,StateCode,Key Identifier,,0,,,,State LGD Code
+City,D7225_2,Key Identifier,"",0,"","","",City
+YearCode,YearCode,Key Identifier,"",0,"","","",YearCode
+Year,Year,Key Identifier,"",0,"","","",Year
+Amount invested for building houses under pradhan mantri awas yojana,I7225_4,Numeric Variable,INR (Indian Rupees),10000000,sum,Not Applicable,Not Applicable,Amount invested for building houses under Pradhan Mantri Awas Yojana in crore
+Amount sanctioned for building houses under pradhan mantri awas yojana,I7225_5,Numeric Variable,INR (Indian Rupees),10000000,sum,Not Applicable,Not Applicable,Amount sanctioned by the Central Government in crore
+Amount released for building houses under pradhan mantri awas yojana,I7225_6,Numeric Variable,INR (Indian Rupees),10000000,sum,Not Applicable,Not Applicable,Amount released by the Central Government in crore
+Houses sanctioned under pradhan mantri awas yojana mission,I7225_7,Numeric Variable,Number,1,sum,Not Applicable,Not Applicable,Houses sanctioned under Pradhan Mantri Awas Yojana mission
+Houses grounded under pradhan mantri awas yojana mission,I7225_8,Numeric Variable,Number,1,sum,Not Applicable,Not Applicable,Houses grounded (houses for which Foundation started)
+Houses completed construction under pradhan mantri awas yojana mission,I7225_9,Numeric Variable,Number,1,sum,Not Applicable,Not Applicable,Houses completed construction
